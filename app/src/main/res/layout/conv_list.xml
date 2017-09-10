@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ext="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <FrameLayout android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:layout_width="fill_parent"
+                 android:id="@+id/mainContainer">
+        <org.telegram.android.views.dialog.ConversationListView android:layout_width="fill_parent"
+                                                                android:layout_height="fill_parent"
+                                                                android:stackFromBottom="true"
+                                                                android:dividerHeight="0dp"
+                                                                android:divider="@android:color/transparent"
+                                                                android:transcriptMode="disabled"
+                                                                android:id="@+id/listView"/>
+
+        <FrameLayout android:layout_width="fill_parent"
+                     android:layout_height="48dp"
+                     android:background="@color/st_contact_panel"
+                     android:clickable="true"
+                     android:id="@+id/contactsPanel"
+                     android:visibility="visible">
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:gravity="center"
+                      android:textColor="#ffffff"
+                      android:textSize="12sp"
+                      android:textStyle="bold"
+                      android:shadowColor="#9ca6b1"
+                      android:shadowDx="0"
+                      android:shadowDy="1"
+                      android:shadowRadius="1"
+                      android:background="@drawable/st_list_selector"
+                      android:duplicateParentState="true"
+                      android:id="@+id/panelTitle"
+                      android:text="ADD TO CONTACTS"/>
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="1dp"
+                  android:layout_gravity="bottom"
+                  android:background="@color/st_contact_panel"/>
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:id="@+id/empty"
+                      android:background="@drawable/st_bubble_service">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="12dp"
+                       android:src="@drawable/st_ic_conv_empty"/>
+            <TextView android:layout_width="120dp"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_marginTop="6dp"
+                      android:layout_marginBottom="12dp"
+                      android:layout_marginLeft="6dp"
+                      android:layout_marginRight="6dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="17sp"
+                      ext:customFont="light"
+                      android:id="@+id/emptyLabel"
+                      android:text="@string/st_conv_empty"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                      android:id="@+id/emptyEncrypted"
+                      android:background="@drawable/st_bubble_service">
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_marginTop="6dp"
+                      android:layout_marginBottom="6dp"
+                      android:layout_marginLeft="6dp"
+                      android:layout_marginRight="6dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      android:id="@+id/emptyEncryptedTitle"
+                      android:text="You have invited Stepan to join a secret chat."/>
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="4dp"
+                      android:layout_marginRight="4dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      ext:customFont="light"
+                      android:text="@string/st_conv_enc_info_title"/>
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="4dp"
+                      android:layout_marginRight="4dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      android:drawableLeft="@drawable/ic_lock_white"
+                      android:drawablePadding="6dp"
+                      ext:customFont="light"
+                      android:text="@string/st_conv_enc_info_info1"/>
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="4dp"
+                      android:layout_marginRight="4dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      android:drawableLeft="@drawable/ic_lock_white"
+                      android:drawablePadding="6dp"
+                      ext:customFont="light"
+                      android:text="@string/st_conv_enc_info_info2"/>
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="4dp"
+                      android:layout_marginRight="4dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      android:drawableLeft="@drawable/ic_lock_white"
+                      android:drawablePadding="6dp"
+                      ext:customFont="light"
+                      android:text="@string/st_conv_enc_info_info3"/>
+
+            <TextView android:layout_width="215dp"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="4dp"
+                      android:layout_marginRight="4dp"
+                      android:layout_marginBottom="6dp"
+                      android:textColor="@color/st_empty_conv"
+                      android:textSize="15sp"
+                      android:drawableLeft="@drawable/ic_lock_white"
+                      android:drawablePadding="6dp"
+                      ext:customFont="light"
+                      android:text="@string/st_conv_enc_info_info4"/>
+
+        </LinearLayout>
+
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:id="@+id/loading"
+                     style="@style/Widget.Sherlock.Light.ProgressBar"/>
+
+        <ImageView android:layout_width="fill_parent"
+                   android:layout_gravity="bottom"
+                   android:layout_height="2dp"
+                   android:scaleType="fitXY"
+                   android:src="@drawable/st_conv_shadow"/>
+    </FrameLayout>
+
+    <FrameLayout android:layout_height="wrap_content"
+                 android:layout_width="fill_parent"
+                 android:gravity="bottom"
+                 android:background="@android:color/white">
+        <LinearLayout android:layout_height="wrap_content"
+                      android:layout_width="fill_parent"
+                      android:layout_gravity="bottom"
+                      android:layoutDirection="ltr">
+
+            <FrameLayout android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:layout_gravity="bottom"
+                              android:id="@+id/messageContainer">
+
+                    <ImageButton android:layout_height="48dp"
+                                 android:layout_width="48dp"
+                                 android:src="@drawable/st_conv_panel_kb"
+                                 android:layout_gravity="bottom"
+                                 android:background="@android:color/transparent"
+                                 android:id="@+id/smileysButton"/>
+
+                    <org.telegram.android.ui.FixedEditText android:layout_height="wrap_content"
+                                                           android:layout_width="0dp"
+                                                           android:layout_weight="1"
+                                                           android:layout_gravity="center_vertical"
+                                                           android:paddingTop="7dp"
+                                                           android:paddingBottom="6dp"
+                                                           android:layout_marginLeft="2dp"
+                                                           android:layout_marginRight="2dp"
+                                                           android:textSize="16sp"
+                                                           android:maxLines="5"
+                                                           android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+                                                           android:imeOptions="actionSend"
+                                                           android:textColorHint="#d9d9d9"
+                                                           android:hint="@string/st_conv_hint"
+                                                           android:id="@+id/text"
+                                                           android:background="@drawable/transparent"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:orientation="horizontal"
+                              android:background="@android:color/white"
+                              android:clickable="true"
+                              android:id="@+id/audioContainer">
+
+                    <ImageView android:layout_width="40dp"
+                               android:layout_height="48dp"
+                               android:paddingLeft="8dp"
+                               android:scaleType="center"
+                               android:src="@drawable/st_conv_voice_rec"/>
+
+                    <TextView android:layout_width="60dp"
+                              android:layout_height="wrap_content"
+                              android:textSize="19sp"
+                              android:text="00:01"
+                              android:textColor="@android:color/black"
+                              android:id="@+id/audioTimer"
+                              android:layout_gravity="center_vertical|left"/>
+
+                    <FrameLayout android:layout_width="0dp"
+                                 android:layout_weight="1"
+                                 android:layout_height="fill_parent"
+                                 android:paddingLeft="16dp"
+                                 android:paddingRight="16dp">
+                        <TextView android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:drawableLeft="@drawable/st_conv_voice_slide_arrow"
+                                  android:drawablePadding="4dp"
+                                  android:textColor="#aaaaaa"
+                                  android:textSize="16dp"
+                                  android:layout_gravity="center_vertical|right"
+                                  android:gravity="center_vertical"
+                                  android:text="@string/st_conv_audio_slide"
+                                  android:id="@+id/audioSlide"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:layout_height="48dp"
+                         android:layout_width="56dp"
+                         android:layout_gravity="bottom">
+                <ImageView android:layout_height="48dp"
+                           android:layout_width="56dp"
+                           android:layout_gravity="bottom"
+                           android:scaleType="center"
+                           android:src="@drawable/st_conv_voice_normal"
+                           android:id="@+id/startAudio"/>
+                <ImageButton android:layout_height="48dp"
+                             android:layout_width="56dp"
+                             android:paddingTop="1dp"
+                             android:layout_gravity="bottom"
+                             android:background="@android:color/transparent"
+                             android:src="@drawable/st_conv_send"
+                             android:id="@+id/sendMessage"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout android:layout_height="fill_parent"
+                     android:layout_width="fill_parent"
+                     android:id="@+id/panel"
+                     android:background="@android:color/white"
+                     android:clickable="true">
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="Exchanging encryption keys..."
+                      android:textSize="16sp"
+                      android:textColor="#909090"
+                      android:id="@+id/waiting"/>
+            <Button android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:textColor="#ff0000"
+                    android:background="@drawable/st_list_selector"
+                    android:textSize="16sp"
+                    android:text="@string/st_conv_delete_chat"
+                    android:id="@+id/delete"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

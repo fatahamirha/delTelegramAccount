@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang_common_typing">typing...</string>
+    <string name="lang_common_typing_single">{content} is typing...</string>
+    <string name="lang_common_typing_multiple">{content} are typing...</string>
+    <string name="lang_common_and">{content1} and {content2}</string>
+    <string name="lang_common_and_short">{content1}, {content2}</string>
+
+    <string name="lang_common_online_templates_now">last seen {time}</string>
+    <string name="lang_common_online_templates_date">@string/lang_common_online_templates_now</string>
+    <string name="lang_common_online_templates_time">@string/lang_common_online_templates_now</string>
+
+    <string name="lang_common_online_now">just now</string>
+    <string name="lang_common_online_ago">{time} ago</string>
+</resources>

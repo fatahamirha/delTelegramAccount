@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="overlay_android">@null</drawable>
+    <drawable name="overlay_sherlock">@drawable/st_content_overlay</drawable>
+    <color name="oversrcoll_color">#FF717171</color>
+
+    <style name="AppEditText" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/holo_edit_text_light</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="AppTextView" parent="android:Widget.TextView">
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="AppListView" parent="@android:style/Widget.ListView">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@drawable/st_list_selector</item>
+        <item name="android:divider">@color/st_divider</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:verticalScrollbarPosition">defaultPosition</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <!--<item name="android:fastScrollThumbDrawable"/>-->
+    </style>
+
+    <style name="AppTheme.ScrollViewStyle"
+           parent="@android:style/Widget.ScrollView">
+        <item name="android:verticalScrollbarPosition">defaultPosition</item>
+    </style>
+
+    <style name="AppTheme.Theme.ActionBarStyle" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@drawable/st_bar_bg</item>
+        <item name="background">@drawable/st_bar_bg</item>
+        <item name="android:titleTextStyle">@style/AppTheme.Theme.ActionBar.TitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/AppTheme.Theme.ActionBar.Subtitle</item>
+        <item name="titleTextStyle">@style/AppTheme.Theme.ActionBar.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/AppTheme.Theme.ActionBar.Subtitle</item>
+    </style>
+
+    <style name="AppTheme.Theme.ActionModeStyle" parent="Widget.Sherlock.ActionMode">
+        <!--<item name="actionOverflowButtonStyle">@style/AppModeOverFlow</item>-->
+        <!--<item name="android:actionOverflowButtonStyle">@style/AppModeOverFlow</item>-->
+    </style>
+
+    <style name="AppTheme.Theme.ActionBar.TitleTextStyle"
+           parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/st_bar_title_color</item>
+    </style>
+
+    <style name="AppTheme.Theme.ActionBar.Subtitle"
+           parent="TextAppearance.Sherlock.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@color/st_bar_subtitle_color</item>
+    </style>
+
+    <style name="AppTheme.Photo.ActionBarStyle" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@color/st_photo_panel</item>
+        <item name="background">@color/st_photo_panel</item>
+        <item name="android:titleTextStyle">@style/AppTheme.Photo.ActionBar.TitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/AppTheme.Photo.ActionBar.Subtitle</item>
+        <item name="titleTextStyle">@style/AppTheme.Photo.ActionBar.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/AppTheme.Photo.ActionBar.Subtitle</item>
+    </style>
+
+    <style name="AppTheme.Photo.ActionBar.TitleTextStyle"
+           parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.Photo.ActionBar.Subtitle"
+           parent="TextAppearance.Sherlock.Widget.ActionBar.Subtitle">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppOverFlow" parent="Widget.Sherlock.ActionButton.Overflow">
+        <item name="android:src">@drawable/st_bar_ic_other</item>
+    </style>
+
+    <style name="AppModeOverFlow" parent="Widget.Sherlock.ActionButton.Overflow">
+        <!--<item name="android:src">@drawable/st_bar_ic_other</item>-->
+        <item name="android:src">@drawable/abs__ic_menu_moreoverflow_holo_light</item>
+    </style>
+
+    <style name="AppSearchTextView" parent="Widget.Sherlock.SearchAutoCompleteTextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textCursorDrawable">@drawable/search_cursor</item>
+    </style>
+
+    <style name="AppTheme.Theme" parent="Theme.Sherlock.Light">
+
+        <item name="android:listViewStyle">@style/AppListView</item>
+
+        <item name="android:editTextStyle">@style/AppEditText</item>
+
+        <item name="android:textViewStyle">@style/AppTextView</item>
+
+        <item name="android:windowBackground">@android:color/white</item>
+
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="windowActionBarOverlay">false</item>
+
+        <item name="android:actionBarStyle">@style/AppTheme.Theme.ActionBarStyle</item>
+        <item name="actionBarStyle">@style/AppTheme.Theme.ActionBarStyle</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/st_bar_back</item>
+        <item name="homeAsUpIndicator">@drawable/st_bar_back</item>
+
+        <item name="android:logo">@drawable/st_bar_logo</item>
+        <item name="logo">@drawable/st_bar_logo</item>
+
+        <item name="android:popupMenuStyle">@style/PopupMenu.Stels</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Stels</item>
+
+        <item name="android:dropDownListViewStyle">@style/DropDown.Stels</item>
+        <item name="dropDownListViewStyle">@style/DropDown.Stels</item>
+
+        <item name="android:dropDownSelector">@drawable/st_list_selector</item>
+
+        <!--<item name="android:windowContentOverlay">@drawable/st_content_overlay</item>-->
+        <!--<item name="windowContentOverlay">@drawable/st_content_overlay</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowContentOverlay">@null</item>
+
+        <item name="android:scrollViewStyle">@style/AppTheme.ScrollViewStyle</item>
+
+        <!-- for ActionBarSherlock -->
+        <item name="actionBarItemBackground">@drawable/st_bar_bg_item</item>
+        <!-- for native ActionBar -->
+        <item name="android:actionBarItemBackground">@drawable/st_bar_bg_item</item>
+
+        <item name="searchViewSearchIcon">@drawable/st_bar_ic_search</item>
+        <item name="searchViewCloseIcon">@drawable/st_bar_ic_search_clear</item>
+        <item name="searchAutoCompleteTextView">@style/AppSearchTextView</item>
+
+        <item name="actionOverflowButtonStyle">@style/AppOverFlow</item>
+        <item name="android:actionOverflowButtonStyle">@style/AppOverFlow</item>
+
+        <item name="android:fastScrollTrackDrawable">@drawable/holo_fastscroll_normal_track</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/holo_fastscroll_thumb</item>
+
+        <item name="actionMenuTextColor">#ffffff</item>
+        <item name="android:actionMenuTextColor">#ffffff</item>
+
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_handle_holo_light</item>
+        <item name="android:scrollbarThumbHorizontal">@drawable/scrollbar_handle_holo_light</item>
+
+        <item name="searchViewTextField">@drawable/search_field</item>
+    </style>
+    <style name="AppTheme.Photo" parent="Theme.Sherlock">
+        <item name="android:windowBackground">@android:color/black</item>
+
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
+
+        <item name="android:actionBarStyle">@style/AppTheme.Photo.ActionBarStyle</item>
+        <item name="actionBarStyle">@style/AppTheme.Photo.ActionBarStyle</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/st_bar_back_photo</item>
+        <item name="homeAsUpIndicator">@drawable/st_bar_back_photo</item>
+    </style>
+
+    <style name="AppTheme.ActionMode" parent="AppTheme.Theme">
+        <item name="actionOverflowButtonStyle">@style/AppModeOverFlow</item>
+        <item name="android:actionOverflowButtonStyle">@style/AppModeOverFlow</item>
+    </style>
+
+
+    <style name="PickDialog.Theme" parent="android:Theme.Dialog">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@drawable/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowIsFloating">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+        <!--<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    </style>
+
+
+    <style name="DropDown.Stels" parent="Widget.Sherlock.Light.ListView.DropDown">
+        <item name="android:divider">@drawable/st_bar_menu_div</item>
+        <item name="android:listSelector">@drawable/st_list_selector</item>
+    </style>
+
+    <style name="PopupMenu.Stels" parent="Widget.Sherlock.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/st_bar_menu_bg</item>
+    </style>
+</resources>

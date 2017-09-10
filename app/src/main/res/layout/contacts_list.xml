@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/white"
+             android:id="@+id/mainContainer">
+
+    <org.telegram.android.ui.StickyFix android:layout_height="fill_parent"
+                                       android:layout_width="fill_parent"
+                                       android:paddingLeft="@dimen/fast_scroll_padding_left"
+                                       android:paddingRight="@dimen/fast_scroll_padding_right"
+                                       android:scrollbarStyle="outsideOverlay"
+                                       android:scrollbars="none"
+                                       android:clipToPadding="false"
+                                       android:fastScrollEnabled="true"
+                                       android:fastScrollAlwaysVisible="true"
+                                       android:id="@+id/contactsList"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="top|center_horizontal"
+              android:id="@+id/empty"
+              android:layout_marginTop="32dp"
+              android:textColor="@color/st_empty_text"
+              android:textSize="19sp"
+              android:text="@string/st_no_contacts"/>
+
+    <ProgressBar android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:id="@+id/loading"
+                 style="@style/Widget.Sherlock.Light.ProgressBar"/>
+</FrameLayout>
