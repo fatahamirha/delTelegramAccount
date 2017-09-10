@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="whats_contacts_title">Контакты и скорость запуска</string>
+    <string name="whats_contacts_0">Удаление контактов</string>
+    <string name="whats_contacts_1">Сортировка контактов (имя/фамилия) использует системную настройку</string>
+    <string name="whats_contacts_2">Улучшена скорость запуска</string>
+
+    <string name="whats_new_design_title">Дизайн, скорость и стабильность</string>
+    <string name="whats_new_design_0">Новый синий дизайн</string>
+    <string name="whats_new_design_1">Ускорение доставки фото, видео и сообщений</string>
+    <string name="whats_new_design_2">Оптимизации для заблокированных стран</string>
+    <string name="whats_new_design_3">Повышена стабильность работы</string>
+
+    <string name="whats_new_secret_title">Добавлены секретные чаты</string>
+    <string name="whats_new_secret_hint">Начните секретный чат из меню или из профиля контакта
+    </string>
+    <string name="whats_new_secret_0">End-to-End шифрование</string>
+    <string name="whats_new_secret_1">Не оставляет следов на наших серверах</string>
+    <string name="whats_new_secret_2">Имеет возможность самоудаления</string>
+    <string name="whats_new_secret_3">Запрещена пересылка сообщений</string>
+
+    <string name="whats_new_arabic_title">Добавлена арабская локализация</string>
+    <string name="whats_new_arabic_hint">Если у Вас есть проблемы с арабской локализацией, пожалуйста, сообщите нашей
+        команде поддержки в Настройках - Задать вопрос.
+    </string>
+    <string name="whats_new_arabic_0">Полная поддержка RTL на Андроиде 4.0+</string>
+    <string name="whats_new_arabic_1">Отраженный интерфейс на Андроиде 4.2+</string>
+    <string name="whats_new_arabic_2">Поддержка индийских цифр</string>
+
+    <string name="whats_new_gif_title">Gif-Анимации, аудио, русская локализация и скорость</string>
+    <string name="whats_new_gif_hint">
+        Gif-Анимации работает только с другими S-Версиями телеграма.
+        Если у Вас есть проблемы с русской локализацией, пожалуйста, сообщите нашей команде поддержки в Настройках -
+        Задать вопрос.
+    </string>
+    <string name="whats_new_gif_0">Отправка Gif-Анимаций</string>
+    <string name="whats_new_gif_1">Предпросмотр документов-изображений</string>
+    <string name="whats_new_gif_2">Отправка и получение аудио (как Документ)</string>
+    <string name="whats_new_gif_3">Улучшена анимация загрузки фотографий</string>
+    <string name="whats_new_gif_4">Русская локализация</string>
+    <string name="whats_new_gif_5">Экспериментальные темы приложения</string>
+
+    <string name="whats_new_spain_title">Добавлена испанская локализация и улучшение стабильности</string>
+    <string name="whats_new_spain_hint">Если у Вас есть проблемы с испанской локализацией, пожалуйста, сообщите нашей
+        команде поддержки в Настройках - Задать вопрос.
+    </string>
+    <string name="whats_new_spain_0">Полностью переведено на испанский язык</string>
+    <string name="whats_new_spain_1">Исправлено около 50 ошибок</string>
+</resources>

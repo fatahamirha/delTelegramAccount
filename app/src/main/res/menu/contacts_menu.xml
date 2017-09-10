@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/searchMenu"
+          android:actionViewClass="com.actionbarsherlock.widget.SearchView"
+          android:icon="@drawable/st_bar_ic_search"
+          android:title="Search"
+          android:showAsAction="always|collapseActionView"/>
+
+    <item android:id="@+id/onlyTContacts"
+          android:title="Only Telegram contacts"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/allContacts"
+          android:title="All contacts"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/addContact"
+          android:title="Add contact"
+          android:showAsAction="never"/>
+
+    <item android:id="@+id/systemContacts"
+          android:title="System contacts"
+          android:showAsAction="never"/>
+</menu>

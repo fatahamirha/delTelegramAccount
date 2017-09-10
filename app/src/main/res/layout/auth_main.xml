@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:ext="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/st_settings_bg">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:id="@+id/automaticInit"
+                android:fillViewport="true">
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center">
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/st_auth_text"
+                      android:gravity="center"
+                      android:textSize="22sp"
+                      android:text="@string/st_auth_confirm_number"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="24dp"
+                      android:textColor="@color/st_black_text"
+                      android:gravity="center"
+                      android:textSize="26sp"
+                      android:id="@+id/automaticPhone"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/st_btn_green"
+                    android:textColor="@android:color/white"
+                    android:textSize="19sp"
+                    android:text="@string/st_auth_confirm_yes"
+                    android:id="@+id/confirmPhone"/>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/st_btn_grey"
+                    android:textColor="@color/st_black_text"
+                    android:textSize="16sp"
+                    android:text="@string/st_auth_confirm_no"
+                    android:id="@+id/editPhone"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="16dp"
+                      android:paddingRight="16dp"
+                      android:paddingTop="16dp"
+                      android:paddingBottom="16dp"
+                      android:gravity="center"
+                      android:textColor="@color/st_black_text"
+                      android:textSize="16sp"
+                      android:text="@string/st_auth_confirm_sms"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:id="@+id/manualPhone"
+                android:fillViewport="true">
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:paddingTop="16dp"
+                      android:paddingLeft="32dp"
+                      android:paddingRight="32dp"
+                      android:gravity="top|center_horizontal"
+                      android:id="@+id/manualPhone">
+
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:textSize="18sp"
+                      android:gravity="center"
+                      android:text="@string/st_auth_phone_title"
+                      android:paddingBottom="12dp"
+                      android:textColor="@color/st_auth_text"/>
+
+            <Button android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:background="@drawable/st_list_selector"
+                    android:gravity="left|center_vertical"
+                    android:id="@+id/countrySelect"/>
+
+            <View android:layout_width="fill_parent"
+                  android:layout_height="@dimen/st_section_div_h"
+                  android:background="@color/st_section_div"/>
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="12dp"
+                          android:layoutDirection="ltr">
+                <TextView android:layout_width="60dp"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="5dp"
+                          android:gravity="center"
+                          android:textSize="19sp"
+                          android:id="@+id/phoneCode"/>
+                <EditText android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:paddingLeft="15dp"
+                          android:paddingRight="15dp"
+                          android:paddingBottom="15dp"
+                          android:textSize="19sp"
+                          android:inputType="phone"
+                          android:imeOptions="actionDone"
+                          android:hint="@string/st_auth_phone_hint"
+                          android:id="@+id/phoneName"/>
+            </LinearLayout>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/st_btn_blue"
+                    android:text="@string/st_continue"
+                    android:id="@+id/doActivation"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/progress"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical">
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     style="@style/Widget.Sherlock.Light.ProgressBar"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="4dp"
+                  android:textSize="18sp"
+                  android:textColor="@color/st_black_text"
+                  android:text="@string/st_auth_activating_title"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/progressTimer"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="16sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:gravity="center"
+                  android:textColor="@color/st_grey_text"
+                  android:text="@string/st_auth_activating_subtitle"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/networkError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="@string/st_error_connection"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="#ffffff"
+                android:text="@string/st_try_again"
+                android:id="@+id/tryAgain"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_grey"
+                android:textColor="@color/st_black_text"
+                android:textSize="16sp"
+                android:text="@string/st_cancel"
+                android:id="@+id/cancel"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/unknownError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="@string/st_error_unknown"/>
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="#ffffff"
+                android:text="@string/st_try_again"
+                android:id="@+id/tryAgain"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_grey"
+                android:textColor="@color/st_black_text"
+                android:textSize="16sp"
+                android:text="@string/st_cancel"
+                android:id="@+id/cancel"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/tooOftenError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:gravity="center"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="@string/st_error_many_attempts"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@string/st_back"
+                android:id="@+id/back"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/expiredError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="@string/st_error_expired"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@string/st_start_again"
+                android:id="@+id/back"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/wrongPhoneError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="You entered incorrect phone."/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@string/st_back"
+                android:id="@+id/back"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:gravity="center_vertical"
+                  android:orientation="vertical"
+                  android:id="@+id/wrongCodeError">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:textSize="21sp"
+                  android:paddingLeft="32dp"
+                  android:paddingRight="32dp"
+                  android:text="@string/st_error_code_incorrect"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/st_btn_blue"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="@string/st_back"
+                android:id="@+id/back"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/phoneRequestProgress"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical">
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     style="@style/Widget.Sherlock.Light.ProgressBar"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="4dp"
+                  android:textSize="18sp"
+                  android:text="@string/st_auth_phone_call"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:id="@+id/completeSignupProgress"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical">
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     style="@style/Widget.Sherlock.Light.ProgressBar"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="4dp"
+                  android:textSize="18sp"
+                  android:text="@string/st_auth_creating"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:fillViewport="true"
+                android:id="@+id/phoneActivation">
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingTop="16dp"
+                      android:paddingLeft="32dp"
+                      android:paddingRight="32dp"
+                      android:gravity="center">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:textSize="18sp"
+                      android:gravity="center"
+                      android:paddingBottom="16dp"
+                      android:textColor="@color/st_auth_text"
+                      android:text="@string/st_auth_code_title"/>
+
+            <EditText android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="15dp"
+                      android:paddingRight="15dp"
+                      android:paddingBottom="15dp"
+                      android:textSize="19sp"
+                      android:inputType="number"
+                      android:imeOptions="actionDone"
+                      android:gravity="center"
+                      android:hint="@string/st_auth_code"
+                      android:id="@+id/code"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:textSize="18sp"
+                      android:gravity="center"
+                      android:paddingTop="16dp"
+                      android:textColor="@color/st_auth_text"
+                      android:id="@+id/codeTimer"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/st_btn_blue"
+                    android:text="@string/st_continue"
+                    android:id="@+id/completePhoneActivation"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:id="@+id/phoneSendProgress"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical">
+        <ProgressBar android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     style="@style/Widget.Sherlock.Light.ProgressBar"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginTop="4dp"
+                  android:textSize="18sp"
+                  android:text="@string/st_auth_activating_title"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:fillViewport="true"
+                android:id="@+id/signupPage">
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:paddingTop="16dp"
+                      android:paddingLeft="32dp"
+                      android:paddingRight="32dp"
+                      android:gravity="top">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:textSize="18sp"
+                      android:gravity="center"
+                      android:paddingBottom="16dp"
+                      android:textColor="@color/st_auth_text"
+                      android:text="@string/st_auth_signup_title"/>
+
+            <org.telegram.android.ui.RtlLinearLayout android:layout_height="wrap_content"
+                                                     android:layout_width="fill_parent"
+                                                     android:baselineAligned="false">
+                <FrameLayout android:layout_width="108dp"
+                             android:layout_height="108dp"
+                             android:layout_marginTop="8dp">
+                    <org.telegram.android.preview.AvatarView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/avatar"/>
+                    <ImageButton android:layout_width="fill_parent"
+                                 android:layout_height="fill_parent"
+                                 android:background="@drawable/st_photo_spinner"
+                                 android:id="@+id/changeAvatarButton"/>
+                </FrameLayout>
+
+                <LinearLayout android:layout_width="0dp"
+                              ext:layout_weight="1"
+                              android:layout_height="wrap_content"
+                              android:layout_marginLeft="8dp"
+                              android:layout_marginRight="8dp"
+                              android:orientation="vertical">
+                    <EditText android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="4dp"
+                              android:hint="@string/st_first_name"
+                              android:textColorHint="#A3A3A3"
+                              android:paddingLeft="16dp"
+                              android:paddingRight="16dp"
+                              android:paddingBottom="15dp"
+                              android:textSize="19sp"
+                              android:lines="1"
+                              android:singleLine="true"
+                              android:capitalize="words"
+                              android:id="@+id/firstName"/>
+                    <EditText android:layout_width="fill_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="18dp"
+                              android:layout_marginBottom="-4dp"
+                              android:hint="@string/st_last_name"
+                              android:textColorHint="#A3A3A3"
+                              android:paddingLeft="16dp"
+                              android:paddingRight="16dp"
+                              android:paddingBottom="15dp"
+                              android:textSize="19sp"
+                              android:lines="1"
+                              android:singleLine="true"
+                              android:capitalize="words"
+                              android:id="@+id/lastName"/>
+                </LinearLayout>
+            </org.telegram.android.ui.RtlLinearLayout>
+
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/st_btn_blue"
+                    android:text="@string/st_continue"
+                    android:id="@+id/completeSignup"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
